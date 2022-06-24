@@ -7,7 +7,7 @@
 .hero{
 	height: 100vh;
 	width: 100%;
-	background-image: url(../img/background.jpg);
+	background-image: url(../img/flinder.jpg);
 	background-size: cover;
 	background-position: center;
 }
@@ -20,7 +20,7 @@ nav{
 	padding-right: 8%;
 }
 .logo{
-	color: white;
+	color: rgb(255, 255, 255);
 	font-size: 35px;
 	letter-spacing: 1px;
 	cursor: pointer;
@@ -43,6 +43,16 @@ nav ul li a:hover{
 	color: #f9004d;
 	transition: .4s;
 }
+.backgroundsquare{
+	background-color:#f9004d;
+	color: white;
+	text-decoration: none;
+	border: 2px solid transparent;
+	border-top-width: 4em;
+	font-weight: bold;
+	padding: 10px 25px;
+	 
+}
 .btn{
 	background-color:#f9004d;
 	color: white;
@@ -59,8 +69,8 @@ nav ul li a:hover{
 .content{
 	position: absolute;
 	top: 50%;
-	left:8%;
-	transform: translateY(-50%);
+	left:50%;
+	transform: translateY(50%);
 }
 h1{
 	color: white;
