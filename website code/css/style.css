@@ -354,3 +354,49 @@ footer p:nth-child(2){
 	bottom: 35px;
 	font-size: 14px; 
 }
+
+
+
+/* sub web css */
+.subWebContent{
+	text-align: center;
+}
+
+.subWebContent h2, h3 {
+	color: rgb(255, 255, 255);
+	text-shadow: 1px 1px 0px black;
+}
+
+
+.subWeb-about-text{
+	width: 600px;
+}
+.subWeb-about-text h2{
+	color: white;
+	font-size: 75px;
+	text-transform: capitalize;
+	margin-bottom: 20px;
+}
+.subWeb-about-text h5{
+	color: white;
+	letter-spacing: 2px;
+	font-size: 22px;
+	margin-bottom: 25px;
+	text-transform: capitalize;
+}
+.subWeb-about-text p{
+	color: #fcfc;
+	letter-spacing: 1px;
+	line-height: 28px;
+	font-size: 18px;
+	margin-bottom: 45px;
+}
+
+.contactDetailP {
+		color: #fcfc;
+		letter-spacing: 1px;
+		line-height: 28px;
+		font-size: 18px;
+		margin-bottom: 45px;
+		text-shadow: 1px 1px 0px black;
+}
