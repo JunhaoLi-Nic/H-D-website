@@ -355,6 +355,16 @@ footer p:nth-child(2){
 	font-size: 14px; 
 }
 
+.translate {
+	color: white;
+	text-decoration: none;
+	border: 2px solid transparent;
+	font-weight: bold;
+	padding: 10px 10px;
+	border-radius: 30px;
+	transition: transform .4s; 
+}
+
 
 
 /* sub web css */

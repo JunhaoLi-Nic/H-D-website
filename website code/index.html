@@ -21,6 +21,27 @@
 		function closeContactDetail(){
 			$('#contact-detail').fadeOut();
 		}
+
+		function setLanguage(lang) {
+			$('#translate_test').text(lang.test);
+		}
+
+
+		var language;
+		function getLanguage(lang) {
+			$.ajax({
+				url: 'language/' + lang + '.json',
+				dataType: 'json',
+				async: false,
+
+				// success: alert("success")
+				success: function (lang) { setLanguage(lang); }
+			});
+		}
+
+
+
+
 	</script>
 
 
@@ -38,22 +59,22 @@
 					<i class="fa fa-caret-down"></i>
 				</button>
 					<div class="dropdown-content">
-					<a href= "furnture.html">Furnture service</a>
+					<a href= "furnture.html">Furniture service</a>
 					<a href= "tutors.html">Tutorial service</a>
 				  </div>
 				  </div>
 				</li>
 				<li><a href= #contact>Contact Us</a></li>
 			</ul>
-			<a href="#" class="btn">EN/中</a>
+			<div><button class="translate" onclick="getLanguage('en')">EN</button><span>/</span><button class="translate" onclick="getLanguage('cn')">中</button></div>
 		</nav>
 
 		<div class="content">
-			
 			<h1>H<span>&</span>D</h1>
 			<h3>More than life.</h3>
+
+			<div id="translate_test"></div>
 		</div>
-		
 	</div>
 
 
