@@ -96,7 +96,6 @@ nav ul li a:hover, .dropdown:hover .dropbtn {
 	 
 }
 .btn{
-	background-color:#f9004d;
 	color: white;
 	text-decoration: none;
 	border: 2px solid transparent;
@@ -363,6 +362,8 @@ footer p:nth-child(2){
 	padding: 10px 10px;
 	border-radius: 30px;
 	transition: transform .4s; 
+	float: none;
+	display: block;
 }
 
 

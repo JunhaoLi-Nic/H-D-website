@@ -9,6 +9,7 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/translate.js"></script>
 
 </head>
 <body>
@@ -22,21 +23,21 @@
 			$('#contact-detail').fadeOut();
 		}
 
-		function setLanguage(lang) {
-			$('#translate_test').text(lang.test);
-		}
 
 
-		var language;
 		function getLanguage(lang) {
+			clearLanguage();
+
 			$.ajax({
 				url: 'language/' + lang + '.json',
 				dataType: 'json',
 				async: false,
 
 				// success: alert("success")
-				success: function (lang) { setLanguage(lang); }
+				success: function (lang) { setLanguage(lang);}
 			});
+
+			$('#' + lang).css('background-color', '#f9004d');
 		}
 
 
@@ -59,21 +60,20 @@
 					<i class="fa fa-caret-down"></i>
 				</button>
 					<div class="dropdown-content">
-					<a href= "furnture.html">Furniture service</a>
-					<a href= "tutors.html">Tutorial service</a>
+					<a href= "furnture.html" id="furniture_tag">Furniture service</a>
+					<a href= "tutors.html" id="tutorial_tag">Tutorial service</a>
 				  </div>
 				  </div>
 				</li>
 				<li><a href= #contact>Contact Us</a></li>
 			</ul>
-			<div><button class="translate" onclick="getLanguage('en')">EN</button><span>/</span><button class="translate" onclick="getLanguage('cn')">中</button></div>
+			<div><a class="btn" onclick="getLanguage('en')" id="en">EN</a><span>/</span><a class="btn" onclick="getLanguage('cn')" id="cn">中</a></div>
 		</nav>
 
 		<div class="content">
 			<h1>H<span>&</span>D</h1>
 			<h3>More than life.</h3>
 
-			<div id="translate_test"></div>
 		</div>
 	</div>
 

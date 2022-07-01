@@ -1,3 +1,5 @@
 {
-    "test": "Test"
+    "test": "Test",
+    "furniture_tag": "Furniture service",
+    "tutorial_tag": "Tutorial service"
 }
