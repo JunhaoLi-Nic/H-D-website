@@ -23,21 +23,6 @@
 		function closeQRcode(){
 			$('#QRcode').fadeOut();
 		}
-
-		function getLanguage(lang) {
-			clearLanguage();
-			
-			$.ajax({
-				url: 'language/' + lang + '.json',
-				dataType: 'json',
-				async: false,
-
-				// success: alert("success")
-				success: function (lang) { setTutor1Language(lang);}
-			});
-
-			$('#' + lang).css('background-color', '#f9004d');
-		}
 	</script>
 
 	<div class="main">
