@@ -17,6 +17,21 @@
 	<!----hero Section start---->
 
 	<script>
+		$(document).ready(function (){
+			var lang = localStorage.getItem('language');
+
+			$.ajax({
+				url: 'language/' + lang + '.json',
+				dataType: 'json',
+				async: false,
+
+				// success: alert("success")
+				success: function (lang) { setLanguage(lang);}
+			});
+
+			$('#' + lang).css('background-color', '#f9004d');
+		})
+
 		function showContactDetail(){
 			$('#contact-detail').fadeIn();
 		}
@@ -25,15 +40,16 @@
 			$('#contact-detail').fadeOut();
 		}
 
-		function getLanguage(lang) {
+		function setLocalStorageLanguage(lang) {
 			clearLanguage();
+
+			localStorage.setItem('language', lang);
+
 			$.ajax({
-				url: 'language/' + lang + '.json',
+				url:  'language/' +  localStorage.getItem('language') + '.json', 
 				dataType: 'json',
 				async: false,
-
-				// success: alert("success")
-				success: function (lang) { setLanguage(lang);}
+				success: function (lang) { setLanguage(lang); } 
 			});
 
 			$('#' + lang).css('background-color', '#f9004d');
@@ -63,9 +79,9 @@
 				<li><a href= #contact>Contact Us</a></li>
 			</ul>
 			<div>
-				<a class="btn" onclick="getLanguage('en')" id="en">EN</a>
+				<a class="btn" onclick="setLocalStorageLanguage('en')" id="en">EN</a>
 				<span>/</span>
-				<a class="btn" onclick="getLanguage('cn')" id="cn">中</a>
+				<a class="btn" onclick="setLocalStorageLanguage('cn')" id="cn">中</a>
 			</div>
 		</nav>
 

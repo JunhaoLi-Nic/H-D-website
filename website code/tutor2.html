@@ -16,6 +16,21 @@
 	<!----hero Section start---->
 
 	<script>
+		$(document).ready(function (){
+			var lang = localStorage.getItem('language');
+
+			$.ajax({
+				url: 'language/' + lang + '.json',
+				dataType: 'json',
+				async: false,
+
+				// success: alert("success")
+				success: function (lang) { setLanguage(lang);}
+			});
+
+			$('#' + lang).css('background-color', '#f9004d');
+		})
+
 		function showQRcode(){
 			$('#QRcode').fadeIn();
 		}
