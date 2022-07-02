@@ -23,18 +23,38 @@
 			$('#contact-detail').fadeOut();
 		}
 
+		
+		function getLanguage() {
 
+			// (localStorage.getItem('language') == null) ? setLocalStorageLanguage('en') : false;
+			// $.ajax({ 
+			// 	url:  'language/' +  localStorage.getItem('language') + '.json', 
+			// 	dataType: 'json',
+			// 	async: false,
+			// 	success: function (lang) { setLanguage(lang); } 
+			// });
 
-		function getLanguage(lang) {
+			// $.ajax({
+			// 	url: 'language/' + lang + '.json',
+			// 	dataType: 'json',
+			// 	async: false,
+
+			// 	// success: alert("success")
+			// 	success: function (lang) { setLanguage(lang);}
+			// });
+		}
+
+		var language;
+		function setLocalStorageLanguage(lang) {
 			clearLanguage();
-			
-			$.ajax({
-				url: 'language/' + lang + '.json',
+
+			(localStorage.getItem('language') == null) ? localStorage.setItem('language', lang) : false;
+
+			$.ajax({ 
+				url:  'language/' +  localStorage.getItem('language') + '.json', 
 				dataType: 'json',
 				async: false,
-
-				// success: alert("success")
-				success: function (lang) { setLanguage(lang);}
+				success: function (lang) { setLanguage(lang); } 
 			});
 
 			$('#' + lang).css('background-color', '#f9004d');
@@ -68,9 +88,9 @@
 				<li><a href= #contact>Contact Us</a></li>
 			</ul>
 			<div>
-				<a class="btn" onclick="getLanguage('en')" id="en">EN</a>
+				<a class="btn" onclick="setLocalStorageLanguage('en')" id="en">EN</a>
 				<span>/</span>
-				<a class="btn" onclick="getLanguage('cn')" id="cn">中</a>
+				<a class="btn" onclick="setLocalStorageLanguage('cn')" id="cn">中</a>
 			</div>
 		</nav>
 
