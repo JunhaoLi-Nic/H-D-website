@@ -48,9 +48,9 @@
 		function setLocalStorageLanguage(lang) {
 			clearLanguage();
 
-			(localStorage.getItem('language') == null) ? localStorage.setItem('language', lang) : false;
+			localStorage.setItem('language', lang);
 
-			$.ajax({ 
+			$.ajax({
 				url:  'language/' +  localStorage.getItem('language') + '.json', 
 				dataType: 'json',
 				async: false,
