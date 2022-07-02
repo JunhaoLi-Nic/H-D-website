@@ -24,7 +24,13 @@
 			$('#QRcode').fadeOut();
 		}
 	</script>
+
 	<div class="main">
+		<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored info-change" onclick="lastIntro()">
+			<i class="material-icons">&lt;</i>
+		</button>
+
+
 		<img src="img/tut1.jpg">
 		<div class="subWeb-about-text">
 			<h2>Maurice</h2>
@@ -34,13 +40,18 @@
 				 微信:13143542183
 				 Email:gilolojhua@gmail.com
 			</p>
-			<button type="button" onclick="showQRcode()">获取微信二维码预约</button>
+			<button type="button" onclick="showQRcode(), changeStopFlag()">获取微信二维码预约</button>
 		</div>
+
+
+		<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored info-change"  onclick="nextIntro()">
+			<i class="material-icons">&gt;</i>
+		</button>
 	</div>
 
 	<div id="QRcode" style="position: fixed; text-align: center; width: 100%; height: 100%; top: 50px; display: none;">
 		<img src="img/tutQRcode1.png">
-		<div><button type="button" onclick="closeQRcode()" style="text-align: center">关闭</button></div>
+		<div><button type="button" onclick="closeQRcode(), changeStopFlag()" style="text-align: center">关闭</button></div>
 	</div>
 </body>
 </html>

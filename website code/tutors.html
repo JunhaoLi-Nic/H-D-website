@@ -19,6 +19,40 @@
 		$(document).ready(function(){
 			$("#tutor_intro").load("tutor1.html");
 		});
+
+		var i = 1;
+		var stopFlag = false;
+		var timeId = setInterval(function(){
+			if(!stopFlag){
+				$("#tutor_intro").load("tutor"+i+".html");
+				i++;
+				if(i>2){
+					i = 1;
+				}
+			}
+		}, 5000)
+
+		function lastIntro() {
+			if(i = 1){
+				$("#tutor_intro").load("tutor1.html");
+			} else if(i = 2) {
+				$("#tutor_intro").load("tutor1.html");
+				i--;
+			}
+		}
+
+		function nextIntro() {
+			if(i = 2){
+				$("#tutor_intro").load("tutor2.html");
+			} else if(i = 1) {
+				$("#tutor_intro").load("tutor2.html");
+				i++;
+			}
+		}
+
+		function changeStopFlag() {
+			stopFlag = !stopFlag;
+		}
 	</script>
 
 
