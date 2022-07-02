@@ -28,6 +28,11 @@ nav{
 span{
 	color: #f9004d;
 }
+nav div span{
+	color: #f9004d;
+	font-size: 30px;
+	font-stretch: 200%;
+}
 nav ul li{
 	list-style-type: none;
 	display: inline-block;
