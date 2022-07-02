@@ -2,7 +2,12 @@
     "test": "Test",
     "furniture_tag": "Furniture service",
     "tutorial_tag": "Tutorial service",
-    "pra_tag": "Providing the most professional furniture assembly services in Melbourne, as well as furniture delivery services",
+    "pra_tag": "Providing the most professional furniture assembly services in Melbourne. As well as furniture delivery services",
     "read_more": "read more",
-    "pra_tag_tutor": "They help students to improve their grades, understand difficult concepts, receive extra help to catch up with classroom lessons."
-}
+    "pra_tag_tutor": "They help students to improve their grades, understand difficult concepts, receive extra help to catch up with classroom lessons.",
+    "scan_code":"Scan QR code",
+    "close_detail":"close",
+    "header_funiture":"Professional furniture assembly",
+    "Furnture_range":"Service:IKEA pick-up, furniture disassembly, long and short term luggage storage, to provide you with the best delivery and furniture assembly services!",
+    "furniture_intro":"Assemble and install domestic and complex structure furniture. The furniture assembly technic is to extend the life span of furniture products"
+} 

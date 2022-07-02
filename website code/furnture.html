@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/translate.js"></script>
+
 </head>
 <body>
 	<!----hero Section start---->
@@ -21,6 +23,21 @@
 
 		function closeContactDetail(){
 			$('#contact-detail').fadeOut();
+		}
+
+		function getLanguage(lang) {
+			clearLanguage();
+			
+			$.ajax({
+				url: 'language/' + lang + '.json',
+				dataType: 'json',
+				async: false,
+
+				// success: alert("success")
+				success: function (lang) { setLanguage(lang);}
+			});
+
+			$('#' + lang).css('background-color', '#f9004d');
 		}
 	</script>
 
@@ -39,48 +56,57 @@
 					<i class="fa fa-caret-down"></i>
 				</button>
 					<div class="dropdown-content">
-					<a href= "furnture.html">Furnture service</a>
-					<a href= "tutors.html">Tutorial service</a>
+					<a href= "furnture.html" id="furniture_tag">Furniture service</a>
+					<a href= "tutors.html" id="tutorial_tag">Tutorial service</a>
 				  </div>
 				  </div>
 				</li>
 				<li><a href= #contact>Contact Us</a></li>
 			</ul>
-			<a href="#" class="btn">EN/中</a>
+			<div>
+				<a class="btn" onclick="getLanguage('en')" id="en">EN</a>
+				<span>/</span>
+				<a class="btn" onclick="getLanguage('cn')" id="cn">中</a>
+			</div>
 		</nav>
-		<div class="subWebContent">
-			
+
+		<div class="content">
 			<h1>H<span>&</span>D</h1>
-			<h3>墨尔本专业家具拼装</h3>
+			<h3>More than life.</h3>
+
 		</div>
-		
 	</div>
     	<!----About section start---->
 	<section class="about">
 		<div class="main">
 			<img src="img/furniturevan.png">
 			<div class="subWeb-about-text">
-				<h2>专业家具拼装服务</h2>
-				<h5>专注于提供墨尔本地区最顶级的家具拼装服务</h5>
-				<p>服务范围:IKEA提货,家具拆装,长短期行李寄存
-					服务准点，为您提供最优质的运送和家具拼装服务！</p>
-                <p> 
-                    组装安装家用及复杂结构家具， 所有项目会由本公司承包且分配给员工执行。对于宜家等品牌来说，正规家具组装技术可以延长家具使用的寿命
-                </p>
-                <p>
-                    Assemble and install domestic and complex structure furniture. The furniture assembly technic is to extend the life span of furniture products. 
-                </p>
+				<h2 id=  "header_funiture">Professional furniture assembly</h2>
+				<h5 id = "furniture_content">Providing the most professional furniture assembly services in Melbourne. As well as furniture delivery services</h5>
+				<p id ="Furnture_range">Service:IKEA pick-up, furniture disassembly, long and short term luggage storage, to provide you with the best delivery and furniture assembly services!</p>
+                <p id = "furniture_intro"> Assemble and install domestic and complex structure furniture. The furniture assembly technic is to extend the life span of furniture products</p>
+           
 				<button type="button" onclick="showContactDetail()">立即预约</button>
 			</div>
 		</div>
 
-		<div id="contact-detail" style="position: fixed; text-align: center; width: 100%; height: 100%; top: 38px; display: none;">
-			<p class="contactDetailP">联系方式:
-				微信:13143542183
-				Email:gilolojhua@gmail.com</p>
-			<img src="img/tutQRcode.png" width="100" height="100">
-			<div><button type="button" onclick="closeContactDetail()" style="text-align: center">关闭</button></div>
-		</div>
 	</section>
+
+		<!------footer start--------->
+		<footer id = "contact">
+			<p>H<span>&</span>D</p>
+			<p>For more information, please contact our manager :)</p>
+			<p class="contactDetailP" id = contact_detail>
+				Wechat:13143542183
+				Email:gilolojhua@gmail.com
+				phone: 0401562682
+			</p>
+			<button type="button" onclick="showContactDetail()" id= "scan_code" >Scan QR code</button>
+			<div id="contact-detail" style="position: fixed; text-align: center; width: 100%; height: 100%; top: 70px; display: none;">
+				<img src="img/tutQRcode.png" width=20% height=50%>
+				<div><button type="button" onclick="closeContactDetail()" style="text-align: center" id="close_detail">close</button></div>
+			</div>
+			<p class="end">CopyRight By Alex Rolls</p>
+		</footer>
 </body>
 </html>

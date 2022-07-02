@@ -8,6 +8,11 @@
 			$('#read_more_tut').text(lang.read_more);
 			$('#pra_tag_tutor').text(lang.pra_tag_tutor);
 			$('#scan_code').text(lang.scan_code);
+			$('#close_detail').text(lang.close_detail);
+			$('#header_funiture').text(lang.header_funiture);
+			$('#furniture_content').text(lang.pra_tag);
+			$('#Furnture_range').text(lang.Furnture_range);
+			$('#furniture_intro').text(lang.furniture_intro);
 			
 		}
 
