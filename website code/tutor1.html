@@ -23,6 +23,21 @@
 		function closeQRcode(){
 			$('#QRcode').fadeOut();
 		}
+
+		function getLanguage(lang) {
+			clearLanguage();
+			
+			$.ajax({
+				url: 'language/' + lang + '.json',
+				dataType: 'json',
+				async: false,
+
+				// success: alert("success")
+				success: function (lang) { setTutor1Language(lang);}
+			});
+
+			$('#' + lang).css('background-color', '#f9004d');
+		}
 	</script>
 
 	<div class="main">
@@ -34,8 +49,8 @@
 		<img src="img/tut1.jpg">
 		<div class="subWeb-about-text">
 			<h2>Maurice</h2>
-			<h5>Monash IT 专业高分天才 Tutor</h5>
-			<p>IT大三学长,software development相关科目都获得HD,近年开始进行1v1辅导,熟知重难点、应对技巧,擅长coding辅导,始终保持高好评率。</p>
+			<h5 id="tutor1_title">Monash IT 专业高分天才 Tutor</h5>
+			<p id="tutor1_intro">IT大三学长,software development相关科目都获得HD,近年开始进行1v1辅导,熟知重难点、应对技巧,擅长coding辅导,始终保持高好评率。</p>
 			<p>联系方式:
 				 微信:13143542183
 				 Email:gilolojhua@gmail.com

@@ -13,10 +13,13 @@
 			$('#furniture_content').text(lang.pra_tag);
 			$('#Furnture_range').text(lang.Furnture_range);
 			$('#furniture_intro').text(lang.furniture_intro);
-			
 		}
 
 		function clearLanguage() {
 			$('#en').css('background-color', 'transparent');
 			$('#cn').css('background-color', 'transparent');
+		}
+
+		function setTutor1Language() {
+			
 		}
