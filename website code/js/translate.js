@@ -8,6 +8,7 @@
 			$('#read_more_tut').text(lang.read_more);
 			$('#pra_tag_tutor').text(lang.pra_tag_tutor);
 			$('#scan_code').text(lang.scan_code);
+			$('#close_detail').text(lang.close_detail);
 			
 		}
 
