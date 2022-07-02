@@ -16,13 +16,9 @@
 	<!----hero Section start---->
 
 	<script>
-		function showQRcode(){
-			$('#QRcode').fadeIn();
-		}
-
-		function closeQRcode(){
-			$('#QRcode').fadeOut();
-		}
+		$(document).ready(function(){
+			$("#tutor_intro").load("tutor1.html");
+		});
 	</script>
 
 
@@ -51,36 +47,12 @@
 		</nav>
 
 		<div class="subWebContent">
-			
 			<h1>H<span>&</span>D</h1>
 			<h2>留学生私人定制1v1辅导</h2>
 			<h3>高效定制学习,只学不会的,只学考的。H&D满足学习方面的所有要求</h3>
 		</div>
-		
 	</div>
-    	<!----About section start---->
-	<section class="about">
-		<div class="main">
-			<img src="img/tut1.jpg">
-			<div class="subWeb-about-text">
-				<h2>Maurice</h2>
-				<h5>Monash IT 专业高分天才 Tutor</h5>
-				<p>IT大三学长,software development相关科目都获得HD,近年开始进行1v1辅导,熟知重难点、应对技巧,擅长coding辅导,始终保持高好评率。</p>
-				<p>联系方式:
-					 微信:13143542183
-					 Email:gilolojhua@gmail.com
-				</p>
-				<button type="button" onclick="showQRcode()">获取微信二维码预约</button>
-			</div>
-		</div>
-
-		<div id="QRcode" style="position: fixed; text-align: center; width: 100%; height: 100%; top: 50px; display: none;">
-			<img src="img/tutQRcode.png">
-			<div><button type="button" onclick="closeQRcode()" style="text-align: center">关闭</button></div>
-		</div>
-
-		
-	</section>
-	
+    	<!----tutor_intro section start---->
+	<div id="tutor_intro" class="about"></div>
 </body>
 </html>
