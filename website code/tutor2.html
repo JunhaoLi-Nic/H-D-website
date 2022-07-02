@@ -32,13 +32,13 @@
 		<img src="img/tut2.jpg">
 		<div class="subWeb-about-text">
 			<h2>Max</h2>
-			<h5>Monash software engineering & commerce 双学位天才 Tutor</h5>
-			<p>现是Monash大学大三学长,software engineering & commerce 双学位,近年开始进行1v1辅导,熟知重难点、考试技巧,擅长举例子使知识点更加通俗易懂,保持超高好评率。</p>
-			<p>联系方式:
+			<h5  id="tutor2_title">Monash software engineering & commerce 双学位天才 Tutor</h5>
+			<p id="tutor2_intro">现是Monash大学大三学长,software engineering & commerce 双学位,近年开始进行1v1辅导,熟知重难点、考试技巧,擅长举例子使知识点更加通俗易懂,保持超高好评率。</p>
+			<p id="tutor2_contact">联系方式:
 				 微信:Nicholaslee0168
 				 Email:nicholasleeeman@gmail.com
 			</p>
-			<button type="button" onclick="showQRcode(), changeStopFlag()">获取微信二维码预约</button>
+			<button type="button" onclick="showQRcode(), changeStopFlag()" id="scan_tut_code">获取微信二维码预约</button>
 		</div>
 
 		<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored info-change"  onclick="nextIntro()">
@@ -48,7 +48,7 @@
 
 	<div id="QRcode" style="position: fixed; text-align: center; width: 100%; height: 100%; top: 50px; display: none;">
 		<img src="img/tutQRcode2.jpg">
-		<div><button type="button" onclick="closeQRcode(), changeStopFlag()" style="text-align: center">关闭</button></div>
+		<div><button type="button" onclick="closeQRcode(), changeStopFlag()" style="text-align: center" id="close_btn">关闭</button></div>
 	</div>
 </body>
 </html>
