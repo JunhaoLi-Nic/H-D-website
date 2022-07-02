@@ -94,8 +94,8 @@
 			<div class="card">
 				<i class="fas fa-bars" ></i>
 				<h5 id= furnture_assembly_tag>Furnture Assembly</h5>
-				<div class="pra" id = pra_tag >
-					<p>Providing the most professional furniture assembly services in Melbourne, as well as furniture delivery services</p>
+				<div class="pra" >
+					<p id = pra_tag>Providing the most professional furniture assembly services in Melbourne, as well as furniture delivery services</p>
 
 					<p style="text-align: center;">
 						<a class="button" href=furnture.html id = read_more>Read More</a>
@@ -106,8 +106,8 @@
 			<div class="card">
 				<i class="far fa-user"></i>
 				<h5>Tutors</h5>
-				<div class="pra" id = pra_tag_tutor>
-					<p>They help students to improve their grades, understand difficult concepts, receive extra help to catch up with classroom lessons.</p>
+				<div class="pra" >
+					<p id = pra_tag_tutor>They help students to improve their grades, understand difficult concepts, receive extra help to catch up with classroom lessons.</p>
 
 					<p style="text-align: center;">
 						<a class="button" href=tutors.html id = read_more_tut>Read More</a>
@@ -125,12 +125,12 @@
 	<footer id = "contact">
 		<p>H<span>&</span>D</p>
 		<p>For more information, please contact our manager :)</p>
-		<p class="contactDetailP">联系方式:
+		<p class="contactDetailP" id = contact_detail>
 			Wechat:13143542183
 			Email:gilolojhua@gmail.com
 			phone: 0401562682
 		</p>
-		<button type="button" onclick="showContactDetail()">获取微信二维码预约</button>
+		<button type="button" onclick="showContactDetail()" id= "scan_code" >Scan QR code</button>
 		<div id="contact-detail" style="position: fixed; text-align: center; width: 100%; height: 100%; top: 70px; display: none;">
 			<img src="img/tutQRcode.png" width=30% height=50%>
 			<div><button type="button" onclick="closeContactDetail()" style="text-align: center">关闭</button></div>
