@@ -11,6 +11,15 @@
 	background-size: cover;
 	background-position: center;
 }
+.company_name{
+	width: 20%;
+}
+.navgation_list{
+	width: 70%;
+}
+.translate_btn{
+	width: 30%;
+}
 nav{
 	display: flex;
 	align-items: center;
