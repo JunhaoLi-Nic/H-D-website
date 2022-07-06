@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html  lang="en">
 <head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Life solver website</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
@@ -10,6 +13,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script src="js/jquery-3.6.0.min.js"></script>
   <script src="js/translate.js"></script>
+
 
 </head>
 <body>
@@ -23,26 +27,6 @@
 			$('#contact-detail').fadeOut();
 		}
 
-		
-		function getLanguage() {
-
-			// (localStorage.getItem('language') == null) ? setLocalStorageLanguage('en') : false;
-			// $.ajax({ 
-			// 	url:  'language/' +  localStorage.getItem('language') + '.json', 
-			// 	dataType: 'json',
-			// 	async: false,
-			// 	success: function (lang) { setLanguage(lang); } 
-			// });
-
-			// $.ajax({
-			// 	url: 'language/' + lang + '.json',
-			// 	dataType: 'json',
-			// 	async: false,
-
-			// 	// success: alert("success")
-			// 	success: function (lang) { setLanguage(lang);}
-			// });
-		}
 
 		localStorage.setItem('language', 'en');
 
@@ -67,43 +51,46 @@
 	</script>
 
 
-	<div class="hero">
-		<nav>
+	<header class="hero header">
+		<nav class="navbar">
 			<ul>
-			<li><a href="index.html" class="logo">H<span>&</span>D</a></li>
-			</ul>
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href = #service class ="backgroundsquare">Services</a></li>
-				<li>
-					<div class="dropdown">
-					<button class="dropbtn">About Us
-					<i class="fa fa-caret-down"></i>
-				</button>
-					<div class="dropdown-content">
-					<a href= "furnture.html" id="furniture_tag">Furniture service</a>
-					<a href= "tutors.html" id="tutorial_tag">Tutorial service</a>
-				  </div>
-				  </div>
-				</li>
-				<li><a href= #contact>Contact Us</a></li>
-			</ul>
-			<div>
-				<a class="btn" onclick="setLocalStorageLanguage('en')" id="en">EN</a>
-				<span>/</span>
-				<a class="btn" onclick="setLocalStorageLanguage('cn')" id="cn">中</a>
-			</div>
-		</nav>
+				<li><a href="index.html" class="logo">H<span>&</span>D</a></li>
+				</ul>
+				<div>
+					<a class="btn" onclick="setLocalStorageLanguage('en')" id="en">EN</a>
+					<span>/</span>
+					<a class="btn" onclick="setLocalStorageLanguage('cn')" id="cn">中</a>
+				</div>
+				<ul class="nav-menu">
+					<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+					<li class="nav-item"><a href = #service class ="nav-link">Services</a></li>
+					<li class="nav-item">
+						<div class="dropdown">
+						<button class="dropbtn" class="nav-link">About Us
+						<i class="fa fa-caret-down"></i>
+					</button>
+						<div class="dropdown-content">
+						<a href= "furnture.html" id="furniture_tag">Furniture service</a>
+						<a href= "tutors.html" id="tutorial_tag">Tutorial service</a>
+					  </div>
+					  </div>
+					</li>
+					<li class="nav-item"><a href= #contact class="nav-link">Contact Us</a></li>
+				</ul>
+				<div class="hamburger">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</div>
+        </nav>
 
 		<div class="content">
 			<h1>H<span>&</span>D</h1>
 			<h3>More than life.</h3>
 
 		</div>
-	</div>
-
-
-	<!-----service section start----------->
+	</header>
+<!-- 
 <section  id = "service">
 
 	<div class="service">
@@ -138,13 +125,12 @@
 
 		</div>
 	</div>
-</section>
+</section> -->
 
 
-	<!------footer start--------->
-	<footer id = "contact">
-		<p>H<span>&</span>D</p>
-		<p>For more information, please contact our manager :)</p>
+	<footer id = "contact" class="footer">
+		<p class="footer-title">H<span>&</span>D</p>
+		<p class="footer-info">For more information, please contact our manager :)</p>
 		<p class="contactDetailP" id = contact_detail>
 			Wechat:13143542183
 			Email:gilolojhua@gmail.com
@@ -158,4 +144,6 @@
 		<p class="end">CopyRight By Alex Rolls</p>
 	</footer>
 </body>
+
+  <script src="js/menutran.js"></script>
 </html>
