@@ -421,3 +421,24 @@ footer p:nth-child(2){
 		margin-bottom: 45px;
 		text-shadow: 1px 1px 0px black;
 }
+
+
+	/* wide laptop */
+@media screen and (max-width: 1200px) {
+	.home-hero-image {
+		height: 50vh;
+	}
+}
+
+/* small laptop */
+@media screen and (max-width: 900px) {
+	.home-hero-image {
+		height: 60vh;
+	}
+	.hero-text-home {
+		margin-top: 25px;
+	}
+	.hero-school-home-image {
+		width: 40%;
+	}
+}
