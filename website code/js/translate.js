@@ -19,8 +19,8 @@
 			$('#tutor2_intro').text(lang.tutor2_intro);
 			$('#tutor1_contact').text(lang.tutor1_contact);
 			$('#tutor2_contact').text(lang.tutor2_contact);
-			$('#scan_tut_code').text(lang.scan_code);
-			$('#close_btn').text(lang.close_detail);
+			$('.scan_tut_code').text(lang.scan_code);
+			$('.close_btn').text(lang.close_detail);
 		}
 
 		function clearLanguage() {
