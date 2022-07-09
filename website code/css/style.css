@@ -469,7 +469,7 @@ footer p:nth-child(2){
 
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1334px) {
     .nav-menu {
         position: fixed;
         left: -100%;
