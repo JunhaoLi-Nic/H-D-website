@@ -8,8 +8,7 @@ navLink.forEach(n => n.addEventListener("click", closeMenu));
 function mobileMenu() {
     hamburger.classList.toggle("active");
     navMenu.classList.toggle("active");
-    $('.content').hide();
-    $('.footer').hide();
+
 }
 
 function closeMenu() {

@@ -315,7 +315,7 @@ footer{
 	position: relative;
 	width: 100%;
 	height: 400px;
-	background: #101010;
+	background-color: #101010;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -500,13 +500,14 @@ footer{
         left: -100%;
         top: 5rem;
         flex-direction: column;
-        background-color: rgb(161, 10, 10);
+        background: rgb(161, 10, 10);
         width: 100%;
         border-radius: 10px;
         text-align: center;
         transition: 0.3s;
         box-shadow:
             0 10px 27px rgba(0, 0, 0, 0.05);
+		z-index: 999;
     }
 
     .nav-menu.active {
@@ -563,4 +564,32 @@ footer{
 	}
 
 
+	.title h2 {
+		width: auto;
+	}
+
+	.box {
+		display: grid;
+	}
+
+	/* .card {
+		margin: 10px;
+		height: 425px;
+		width: 300px;
+		border-radius: 4px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		color: #fff;
+		background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
+		transition: 0.3s ease-in;
+	} */
+}
+
+
+@media only screen and (max-width: 410px){
+
+	#EN_to_CN {
+		display: none;
+	}
 }
