@@ -115,60 +115,126 @@
     </script>
 
 
-    <div class="hero">
-        <nav>
-            <ul>
-                <li><a href="index.html" class="logo">H<span>&</span>D</a></li>
+<header class="hero header">
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html" class="logo">H<span>&</span>D</a></li>
             </ul>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href=#service class="backgroundsquare">Services</a></li>
-                <li>
-                    <div class="dropdown">
-                        <button class="dropbtn">About Us
-                            <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="dropdown-content">
-                            <a href="furnture.html" id="furniture_tag">Furniture service</a>
-                            <a href="tutors.html" id="tutorial_tag">Tutorial service</a>
-                        </div>
-                    </div>
-                </li>
-                <li><a href=#contact>Contact Us</a></li>
-            </ul>
-            <div>
+            <div id="EN_to_CN">
                 <a class="btn" onclick="setLocalStorageLanguage('en')" id="en">EN</a>
                 <span>/</span>
                 <a class="btn" onclick="setLocalStorageLanguage('cn')" id="cn">中</a>
             </div>
-        </nav>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href = #service class ="nav-link">Services</a></li>
+                <li class="nav-item">
+                    <div class="dropdown">
+                    <button class="dropbtn" class="nav-link">About Us
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                    <div class="dropdown-content">
+                    <a href= "furnture.html" id="furniture_tag">Furniture service</a>
+                    <a href= "tutors.html" id="tutorial_tag">Tutorial service</a>
+                  </div>
+                  </div>
+                </li>
+                <li class="nav-item"><a href= #contact class="nav-link">Contact Us</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+    </nav>
 
-        <div class="content">
-            <h1>H<span>&</span>D</h1>
-            <h3>More than life.</h3>
+    <div class="content">
+        <h1>H<span>&</span>D</h1>
+        <h3>More than life.</h3>
 
+    </div>
+</header>
+    <!----tutor_intro section start---->
+    <div id="tutor_intro1" class="about">
+        <div class="main">
+            <!-- <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored info-change" onclick="lastIntro()">
+                <i class="material-icons">&lt;</i>
+            </button> -->
+            <img src="img/tut1.jpg">
+            <div class="subWeb-about-text">
+                <h2>Maurice</h2>
+                <h5 id="tutor1_title">Monash IT Tutor</h5>
+                <p id="tutor1_intro">Now I am a junior in Monash University with a double degree in Software Engineering & Commerce. In recent years, I began to take 1V1 tutoring. I am familiar with the key and difficult points and examination skills, and I am good at giving examples to make knowledge points easier to understand and keep high praise rate. </p>
+                <p id="tutor1_contact">contact info: Wechat:13143542183 Email:gilolojhua@gmail.com phone
+                </p>
+                <button type="button" onclick="showQRcode(), changeStopFlag()" id="scan_tut_code">scan QR code</button>
+            </div>
+<!--     
+            <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored info-change"  onclick="nextIntro()">
+                <i class="material-icons">&gt;</i>
+            </button> -->
+        </div>
+    
+        <div id="QRcode" style="position: fixed; text-align: center; width: 100%; height: 100%; top: 50px; display: none;">
+            <img src="img/tutQRcode1.png">
+            <div><button type="button" onclick="closeQRcode(), changeStopFlag()" style="text-align: center" id="close_btn">关闭</button></div>
         </div>
     </div>
-    <!----tutor_intro section start---->
-    <div id="tutor_intro" class="about"></div>
-    <!------footer start--------->
-    <footer id="contact">
-        <p>H<span>&</span>D</p>
-        <p>For more information, please contact our manager :)</p>
-        <p class="contactDetailP" id=contact_detail>
-            Wechat:13143542183
-            Email:gilolojhua@gmail.com
-            phone: 0401562682
-        </p>
-        <button type="button" onclick="showContactDetail()" id="scan_code">Scan QR code</button>
-        <div id="contact-detail"
-            style="position: fixed; text-align: center; width: 100%; height: 100%; top: 70px; display: none;">
-            <img src="img/tutQRcode1.png" width=20% height=50%>
-            <div><button type="button" onclick="closeContactDetail()" style="text-align: center"
-                    id="close_detail">close</button></div>
+    <div id="tutor_intro1" class="about">
+        <div class="main">
+            <!-- <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored info-change" onclick="lastIntro()">
+                <i class="material-icons">&lt;</i>
+            </button> -->
+    
+            <img src="img/tut2.jpg">
+            <div class="subWeb-about-text">
+                <h2>Max</h2>
+                <h5  id="tutor2_title">Monash software engineering & commerce double degrees Tutor</h5>
+                <p id="tutor2_intro">Now I am a junior in Monash University with a double degree in Software Engineering & Commerce. In recent years, I began to take 1V1 tutoring. I am familiar with the key and difficult points and examination skills, and I am good at giving examples to make knowledge points easier to understand and keep high praise rate. </p>
+                <p id="tutor2_contact">contact info: Wechat:Nicholaslee0168 Email:nicholasleeeman@gmail.com phone number:0401562682
+                </p>
+                <button type="button" onclick="showQRcode(), changeStopFlag()" id="scan_tut_code">scan QR code</button>
+            </div>
+    
+            <!-- <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored info-change"  onclick="nextIntro()">
+                <i class="material-icons">&gt;</i>
+            </button> -->
         </div>
-        <p class="end">CopyRight By Alex Rolls</p>
-    </footer>
+    
+        <div id="QRcode" style="position: fixed; text-align: center; width: 100%; height: 100%; top: 50px; display: none;">
+            <img src="img/tutQRcode2.jpg">
+            <div><button type="button" onclick="closeQRcode(), changeStopFlag()" style="text-align: center" id="close_btn">关闭</button></div>
+        </div>
+    </div>
+    <!------footer start--------->
+
+	<footer id = "contact" class="footer">
+		<p class="footer-title">H<span>&</span>D</p>
+		<div class="col-1">
+			<p class="footer-info">For more information please contact our manager :)</p></div>
+
+		<p class="contactDetailP" id = "contact_detail">
+			Wechat:13143542183
+			<br>
+			Email:gilolojhua@gmail.com
+			<br>
+			phone: 0401562682
+		</p>
+		<div><button type="button" onclick="showContactDetail()" id= "scan_code" class="scan_code" >Scan QR code</button></div>
+	
+		<div id="contact-detail">
+			<img src="img/tutQRcode1.png" width=20% height=50%>
+		<div><button type="button" onclick="closeContactDetail()" style="text-align: center" id="close_detail">close</button></div></div>
+		
+		<section class="social__media">
+			<div class="social__media--wrap">
+			  <p class="website__rights">CopyRight By Alex Rolls</p>
+			</div>
+		</section>
+	
+	</footer>
 </body>
 
+
+<script src="js/menutran.js"></script>
 </html>
