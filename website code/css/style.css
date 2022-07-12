@@ -7,7 +7,7 @@
 .hero{
 	height: 90vh;
 	width: 100%;
-	background-image: url(../img/flinder.jpg);
+	background-image: url(../img/desktopflinder.jpg);
 	background-color: black;
 	background-size: cover;
 	background-position: center;
@@ -573,6 +573,14 @@ footer{
 
 	.box {
 		display: grid;
+	}
+
+	.hero {
+		background-image: url(../img/flinder.jpg);
+	}
+
+	.backgroundsquare {
+		background-color: transparent;
 	}
 
 	/* .card {
