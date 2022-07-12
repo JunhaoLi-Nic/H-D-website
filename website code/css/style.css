@@ -498,6 +498,7 @@ footer{
 
 
 @media only screen and (max-width: 1334px) {
+
     .nav-menu {
         position: fixed;
         left: -100%;
@@ -582,6 +583,39 @@ footer{
 	.backgroundsquare {
 		background-color: transparent;
 	}
+
+	.about {
+		overflow-x: hidden;
+	}
+
+	.subWeb-about-text p {
+		word-wrap: break-word;
+		max-width: 250px;
+	}
+
+	.about img {
+		height: auto;
+		width: 50%;
+		padding: 0px 50px;
+		margin-bottom: 30px;
+		display: block;
+		margin-left: 20%;
+    	/* margin-right: auto; */
+	}
+
+	.subWeb-about-text h2, .subWeb-about-text h5, .subWeb-about-text p, .subWeb-about-text button{
+		word-wrap: break-word;
+		max-width: 300px;
+		display: block;
+		margin-left: 30%;
+		/* margin-right: auto; */
+	}
+
+	.subWeb-about-text h2{
+		font-size: 50px;
+		width: auto;
+	}
+
 
 	/* .card {
 		margin: 10px;
