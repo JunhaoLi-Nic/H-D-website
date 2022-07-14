@@ -167,7 +167,7 @@ h4{
 	padding: 100px 0px;
 	background-color: #191919;
 }
-.about img{
+.about_img{
 	height: auto;
 	width: 430px;
 	padding: 0px 50px;
@@ -598,7 +598,15 @@ footer{
 		max-width: 250px;
 	}
 
-	.about img {
+	.QRcode_img {
+		height: auto;
+		width: 80%;
+		margin-bottom: 30px;
+		display: block;
+		margin-left: 15%;
+	}
+
+	.about_img{
 		height: auto;
 		width: 65%;
 		padding: 0px 50px;
@@ -607,6 +615,8 @@ footer{
 		margin-left: 20%;
     	/* margin-right: auto; */
 	}
+
+	
 
 	.subWeb-about-text h2, .subWeb-about-text h5, .subWeb-about-text p, .subWeb-about-text button{
 		word-wrap: break-word;
@@ -649,5 +659,9 @@ footer{
 
 	.EN_to_CN_span {
 		color: white;
+	}
+
+	.tutor2-padding {
+		padding-left: 80px;
 	}
 }
