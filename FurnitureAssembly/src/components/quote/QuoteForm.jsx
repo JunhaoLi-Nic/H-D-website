@@ -105,11 +105,11 @@ export default function QuoteForm({ onSubmit }) {
               <div className="space-y-2">
                 <Label htmlFor="phone">Phone Number *</Label>
                 <Input
-                  id="phone"
                   type="tel"
+                  id="phone"
                   value={formData.phone}
                   onChange={(e) => handleInputChange("phone", e.target.value)}
-                  placeholder="(555) 123-4567"
+                  placeholder="0401 562 682"
                   required
                 />
               </div>

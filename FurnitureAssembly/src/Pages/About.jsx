@@ -16,35 +16,11 @@ import {
   Zap
 } from "lucide-react";
 
-const teamMembers = [
-  {
-    name: "Mike Johnson",
-    role: "Founder & Lead Assembly Expert",
-    experience: "12+ years",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
-    specialties: ["IKEA Expert", "Custom Furniture", "Office Setup"]
-  },
-  {
-    name: "Sarah Chen",
-    role: "Operations Manager",
-    experience: "8+ years",
-    image: "https://images.unsplash.com/photo-1494790108755-2616b332c1c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
-    specialties: ["Project Management", "Quality Control", "Customer Relations"]
-  },
-  {
-    name: "David Rodriguez",
-    role: "Senior Assembly Technician",
-    experience: "10+ years",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
-    specialties: ["Complex Assembly", "Repair Services", "Training"]
-  }
-];
-
 const values = [
   {
     icon: Shield,
     title: "Trustworthy Service",
-    description: "Licensed, bonded, and insured professionals you can count on.",
+    description: "Licensed, professionals you can count on.",
     color: "bg-blue-100 text-blue-600"
   },
   {
@@ -68,10 +44,10 @@ const values = [
 ];
 
 const achievements = [
-  { number: "2,500+", label: "Happy Customers" },
-  { number: "5,000+", label: "Projects Completed" },
+  { number: "250+", label: "Happy Customers" },
+  { number: "500+", label: "Projects Completed" },
   { number: "4.9/5", label: "Average Rating" },
-  { number: "10+", label: "Years Experience" },
+  { number: "5+", label: "Years Experience" },
   { number: "24hr", label: "Response Time" },
   { number: "100%", label: "Satisfaction Rate" }
 ];
@@ -142,7 +118,7 @@ export default function About() {
                     <Clock className="w-8 h-8 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4">Founded in 2014</h3>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">Founded in 2019</h3>
                     <p className="text-gray-600 leading-relaxed">
                       AssemblyPro was founded with a simple mission: to take the frustration out of 
                       furniture assembly. What started as a small local service has grown into the 
@@ -217,56 +193,6 @@ export default function About() {
                   <p className="text-gray-600 leading-relaxed">
                     {value.description}
                   </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Meet Our Team
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              The skilled professionals behind your perfect assembly
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
-              <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group">
-                <CardContent className="p-8 text-center">
-                  <div className="w-32 h-32 mx-auto mb-6 overflow-hidden rounded-full">
-                    <img 
-                      src={member.image} 
-                      alt={member.name}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                    />
-                  </div>
-                  
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                    {member.name}
-                  </h3>
-                  
-                  <p className="text-blue-600 font-semibold mb-2">
-                    {member.role}
-                  </p>
-                  
-                  <Badge variant="outline" className="mb-4">
-                    {member.experience}
-                  </Badge>
-                  
-                  <div className="space-y-2">
-                    {member.specialties.map((specialty, idx) => (
-                      <div key={idx} className="text-sm text-gray-600">
-                        • {specialty}
-                      </div>
-                    ))}
-                  </div>
                 </CardContent>
               </Card>
             ))}

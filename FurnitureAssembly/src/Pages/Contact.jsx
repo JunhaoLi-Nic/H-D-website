@@ -18,41 +18,41 @@ const contactMethods = [
   {
     icon: Phone,
     title: "Call Us",
-    description: "Speak directly with our team",
-    contact: "(555) 123-4567",
-    action: "tel:+15551234567",
-    color: "bg-green-100 text-green-600",
-    available: "Mon-Sat: 8AM-7PM, Sun: 10AM-5PM"
-  },
-  {
-    icon: Mail,
-    title: "Email Us",
-    description: "Send us your questions",
-    contact: "hello@assemblypro.com",
-    action: "mailto:hello@assemblypro.com",
-    color: "bg-blue-100 text-blue-600",
-    available: "24/7 - We respond within 2 hours"
+    contact: "0401 562 682",
+    action: "tel:+61401562682",
+    description: "Speak directly with our assembly experts",
+    availability: "Mon-Sat: 8AM-7PM, Sun: 10AM-5PM",
+    bgColor: "from-green-500 to-emerald-500"
   },
   {
     icon: MessageSquare,
-    title: "Text Message",
+    title: "Text Message", 
+    contact: "0401 562 682",
+    action: "sms:+61401562682",
     description: "Quick questions via SMS",
-    contact: "(555) 123-4567",
-    action: "sms:+15551234567",
-    color: "bg-purple-100 text-purple-600",
-    available: "Mon-Fri: 9AM-6PM"
+    availability: "24/7 - We respond within 2 hours",
+    bgColor: "from-blue-500 to-cyan-500"
+  },
+  {
+    icon: MapPin,
+    title: "Service Areas",
+    contact: "Greater Melbourne Area",
+    action: "#",
+    description: "Professional assembly at your location",
+    availability: "Same-day service available",
+    bgColor: "from-purple-500 to-pink-500"
   }
 ];
 
 const serviceAreas = [
-  "Downtown Metro",
-  "North District",
-  "South Hills",
-  "East Valley",
-  "West End",
-  "Suburban Areas",
-  "Business Districts",
-  "Surrounding Communities"
+  "Melbourne CBD",
+  "Richmond & South Yarra",
+  "St Kilda & Port Melbourne",
+  "Carlton & Fitzroy",
+  "Brighton & Bayside",
+  "Box Hill & Eastern Suburbs",
+  "Footscray & Western Suburbs",
+  "Greater Melbourne Area"
 ];
 
 const faqItems = [
@@ -65,8 +65,8 @@ const faqItems = [
     answer: "Yes! We offer same-day service when available. Contact us early in the day to check availability for urgent assembly needs."
   },
   {
-    question: "Are you licensed and insured?",
-    answer: "Absolutely. We are fully licensed, bonded, and insured for your complete peace of mind and protection."
+    question: "Are you licensed ?",
+    answer: "Absolutely. We are fully licensed for your complete peace of mind and protection."
   },
   {
     question: "What brands of furniture do you assemble?",
@@ -95,7 +95,7 @@ export default function Contact() {
             {contactMethods.map((method, index) => (
               <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group">
                 <CardContent className="p-8 text-center">
-                  <div className={`w-16 h-16 ${method.color} rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={`w-16 h-16 bg-gradient-to-r ${method.bgColor} text-white rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <method.icon className="w-8 h-8" />
                   </div>
                   
@@ -115,7 +115,7 @@ export default function Contact() {
                   </a>
                   
                   <Badge variant="outline" className="text-xs">
-                    {method.available}
+                    {method.availability}
                   </Badge>
                 </CardContent>
               </Card>
@@ -139,7 +139,7 @@ export default function Contact() {
               </Link>
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-6">
                 <Phone className="w-5 h-5 mr-2" />
-                Call Now: (555) 123-4567
+                Call Now: 0401 562 682
               </Button>
             </div>
           </div>
@@ -193,7 +193,7 @@ export default function Contact() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 mb-6">
-                  We proudly serve the greater metro area and surrounding communities:
+                  We proudly serve Melbourne and the greater metropolitan area:
                 </p>
                 <div className="grid grid-cols-2 gap-3">
                   {serviceAreas.map((area, index) => (
@@ -249,11 +249,11 @@ export default function Contact() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700">
                 <Phone className="w-5 h-5 mr-2" />
-                Call Us: (555) 123-4567
+                Call Us: 0401 562 682
               </Button>
               <Button size="lg" variant="outline">
-                <Mail className="w-5 h-5 mr-2" />
-                Email: hello@assemblypro.com
+                <MessageSquare className="w-5 h-5 mr-2" />
+                Text Us: 0401 562 682
               </Button>
             </div>
           </div>
@@ -269,10 +269,10 @@ export default function Contact() {
           <p className="text-red-100 mb-6">
             We offer emergency and same-day assembly services for urgent needs
           </p>
-          <a href="tel:+15551234567">
+          <a href="tel:+61401562682">
             <Button size="lg" className="bg-white text-red-600 hover:bg-gray-100">
               <Phone className="w-5 h-5 mr-2" />
-              Emergency Line: (555) 123-4567
+              Emergency Line: 0401 562 682
             </Button>
           </a>
         </div>

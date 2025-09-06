@@ -14,8 +14,8 @@ import {
 const benefits = [
   {
     icon: Shield,
-    title: "Licensed & Insured",
-    description: "Fully licensed, bonded, and insured for your peace of mind.",
+    title: "Licensed ",
+    description: "Fully licensed, bonded,  for your peace of mind.",
     color: "bg-blue-100 text-blue-600"
   },
   {

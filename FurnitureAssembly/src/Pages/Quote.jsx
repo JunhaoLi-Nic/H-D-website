@@ -84,7 +84,7 @@ export default function QuotePage() {
                         <Phone className="w-5 h-5 text-green-600" />
                       </div>
                       <h3 className="font-semibold text-gray-900 mb-1">Call Us</h3>
-                      <p className="text-xl font-bold text-blue-600 mb-1">(555) 123-4567</p>
+                      <p className="text-xl font-bold text-blue-600 mb-1">0401 562 682</p>
                       <p className="text-xs text-gray-500">Mon-Sat 8AM-7PM</p>
                     </div>
                   </div>
@@ -95,7 +95,7 @@ export default function QuotePage() {
                         <MessageSquare className="w-5 h-5 text-blue-600" />
                       </div>
                       <h3 className="font-semibold text-gray-900 mb-1">Text Us</h3>
-                      <p className="text-xl font-bold text-blue-600 mb-1">(555) 123-4567</p>
+                      <p className="text-xl font-bold text-blue-600 mb-1">0401 562 682</p>
                       <p className="text-xs text-gray-500">Quick responses 7 days</p>
                     </div>
                   </div>

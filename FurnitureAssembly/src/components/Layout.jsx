@@ -107,7 +107,7 @@ export default function Layout({ children, currentPageName }) {
               </p>
               <div className="flex items-center gap-4">
                 <div>
-                  <p className="font-semibold">Licensed & Insured</p>
+                  <p className="font-semibold">Licensed</p>
                   <p className="text-sm text-gray-400">Fully bonded professionals</p>
                 </div>
               </div>
@@ -127,9 +127,8 @@ export default function Layout({ children, currentPageName }) {
             <div>
               <h4 className="font-semibold mb-4 text-blue-300">Contact Info</h4>
               <div className="space-y-2 text-gray-300">
-                <p>📞 (555) 123-4567</p>
-                <p>✉️ hello@assemblypro.com</p>
-                <p>📍 Serving Greater Metro Area</p>
+                <p>📞 0401 562 682</p>
+                <p>📍 Serving Greater Melbourne Area</p>
                 <p>🕒 Mon-Sat: 8AM-7PM</p>
                 <p>🕒 Sunday: 10AM-5PM</p>
               </div>
@@ -137,7 +136,7 @@ export default function Layout({ children, currentPageName }) {
           </div>
           
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 AssemblyPro. All rights reserved. Licensed, Bonded & Insured.</p>
+            <p>&copy; 2024 AssemblyPro. All rights reserved. Licensed.</p>
           </div>
         </div>
       </footer>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { CheckCircle, Clock, Phone, Mail, Home } from "lucide-react";
+import { CheckCircle, Clock, Phone, Mail, Home, MessageSquare } from "lucide-react";
 
 export default function QuoteSuccess({ quote }) {
   return (
@@ -111,11 +111,11 @@ export default function QuoteSuccess({ quote }) {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <div className="flex items-center gap-2 justify-center">
               <Phone className="w-5 h-5" />
-              <span className="font-semibold">(555) 123-4567</span>
+              <span className="font-semibold">0401 562 682</span>
             </div>
             <div className="flex items-center gap-2 justify-center">
-              <Mail className="w-5 h-5" />
-              <span className="font-semibold">hello@assemblypro.com</span>
+              <MessageSquare className="w-5 h-5" />
+              <span className="font-semibold">Text us anytime</span>
             </div>
           </div>
         </div>

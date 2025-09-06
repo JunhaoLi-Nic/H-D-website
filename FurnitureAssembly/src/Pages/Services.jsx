@@ -107,7 +107,7 @@ export default function Services() {
             {[
               { icon: CheckCircle, text: "100% Satisfaction Guarantee" },
               { icon: Clock, text: "Same-Day Service Available" },
-              { icon: Star, text: "Licensed & Insured" },
+              { icon: Star, text: "Licensed" },
               { icon: DollarSign, text: "Transparent Pricing" }
             ].map((benefit, index) => (
               <div key={index} className="flex items-center gap-3 bg-white p-4 rounded-xl shadow-md">

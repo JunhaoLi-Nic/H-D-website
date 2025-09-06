@@ -36,9 +36,9 @@ export default function Home() {
   };
 
   const stats = [
-    { icon: Users, label: "Happy Customers", value: "2,500+" },
-    { icon: Wrench, label: "Projects Completed", value: "5,000+" },
-    { icon: Award, label: "Years Experience", value: "10+" },
+    { icon: Users, label: "Happy Customers", value: "300+" },
+    { icon: Wrench, label: "Projects Completed", value: "500+" },
+    { icon: Award, label: "Years Experience", value: "5+" },
     { icon: Star, label: "Average Rating", value: "4.9" },
   ];
 
