@@ -1,0 +1,110 @@
+{
+    "name": "Quote",
+    "type": "object",
+    "properties": {
+      "customer_name": {
+        "type": "string",
+        "description": "Customer's full name"
+      },
+      "email": {
+        "type": "string",
+        "format": "email",
+        "description": "Customer's email address"
+      },
+      "phone": {
+        "type": "string",
+        "description": "Customer's phone number"
+      },
+      "address": {
+        "type": "string",
+        "description": "Service address"
+      },
+      "service_type": {
+        "type": "string",
+        "enum": [
+          "bedroom_furniture",
+          "office_furniture",
+          "living_room",
+          "dining_room",
+          "outdoor_furniture",
+          "ikea_furniture",
+          "custom_assembly",
+          "disassembly",
+          "furniture_repair"
+        ],
+        "description": "Type of furniture assembly service"
+      },
+      "furniture_items": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "item_name": {
+              "type": "string"
+            },
+            "brand": {
+              "type": "string"
+            },
+            "quantity": {
+              "type": "number"
+            },
+            "complexity": {
+              "type": "string",
+              "enum": [
+                "simple",
+                "medium",
+                "complex"
+              ]
+            }
+          }
+        },
+        "description": "List of furniture items to assemble"
+      },
+      "preferred_date": {
+        "type": "string",
+        "format": "date",
+        "description": "Customer's preferred service date"
+      },
+      "preferred_time": {
+        "type": "string",
+        "enum": [
+          "morning",
+          "afternoon",
+          "evening",
+          "flexible"
+        ],
+        "description": "Preferred time slot"
+      },
+      "additional_notes": {
+        "type": "string",
+        "description": "Additional information or special requests"
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "pending",
+          "quoted",
+          "scheduled",
+          "completed",
+          "cancelled"
+        ],
+        "default": "pending",
+        "description": "Quote status"
+      },
+      "estimated_price": {
+        "type": "number",
+        "description": "Estimated quote amount"
+      },
+      "estimated_hours": {
+        "type": "number",
+        "description": "Estimated hours for completion"
+      }
+    },
+    "required": [
+      "customer_name",
+      "email",
+      "phone",
+      "address",
+      "service_type"
+    ]
+  }
