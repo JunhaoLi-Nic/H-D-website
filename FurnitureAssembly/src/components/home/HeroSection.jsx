@@ -1,11 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { createPageUrl } from "@/utils";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, CheckCircle, Star, Shield, Phone } from "lucide-react";
+import { Testimonial } from "@/entities/Testimonial";
 
 export default function HeroSection() {
+  const [rating, setRating] = useState("0.0");
+  const [totalReviews, setTotalReviews] = useState(0);
+
+  useEffect(() => {
+    loadReviewStats();
+  }, []);
+
+  const loadReviewStats = async () => {
+    const average = await Testimonial.getAverageRating();
+    const total = await Testimonial.getTotalReviews();
+    setRating(average);
+    setTotalReviews(total);
+  };
+
   return (
     <section className="relative py-20 lg:py-32 bg-gradient-to-br from-blue-50 to-indigo-100 overflow-hidden">
       <div className="absolute inset-0 bg-white/50"></div>
@@ -66,7 +81,7 @@ export default function HeroSection() {
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                 ))}
-                <span className="ml-2 text-gray-600 font-medium">4.9/5 (250+ reviews)</span>
+                <span className="ml-2 text-gray-600 font-medium">{rating}/5 ({totalReviews}+ reviews)</span>
               </div>
             </div>
           </div>
@@ -87,7 +102,7 @@ export default function HeroSection() {
                     <CheckCircle className="w-6 h-6 text-green-600" />
                   </div>
                   <div>
-                    <div className="font-bold text-gray-900">5,000+</div>
+                    <div className="font-bold text-gray-900">500+</div>
                     <div className="text-sm text-gray-600">Projects Completed</div>
                   </div>
                 </div>
@@ -99,7 +114,7 @@ export default function HeroSection() {
                     <Star className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
-                    <div className="font-bold text-gray-900">4.9 Stars</div>
+                    <div className="font-bold text-gray-900">{rating} Stars</div>
                     <div className="text-sm text-gray-600">Customer Rating</div>
                   </div>
                 </div>

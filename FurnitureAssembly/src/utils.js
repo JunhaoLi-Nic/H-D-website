@@ -3,6 +3,7 @@ export const createPageUrl = (pageName) => {
     'Home': '/',
     'Services': '/services',
     'Quote': '/quote',
+    'Reviews': '/reviews',
     'About': '/about',
     'Contact': '/contact'
   };

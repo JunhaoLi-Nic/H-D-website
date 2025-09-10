@@ -6,6 +6,7 @@ import Services from './Pages/Services';
 import Quote from './Pages/Quote';
 import About from './Pages/About';
 import Contact from './Pages/Contact';
+import Reviews from './Pages/Reviews';
 
 function App() {
   return (
@@ -34,6 +35,11 @@ function App() {
         <Route path="/contact" element={
           <Layout currentPageName="Contact">
             <Contact />
+          </Layout>
+        } />
+        <Route path="/reviews" element={
+          <Layout currentPageName="Reviews">
+            <Reviews />
           </Layout>
         } />
       </Routes>

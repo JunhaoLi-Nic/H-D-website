@@ -1,20 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Testimonial } from "@/entities/Testimonial";
 import { 
   Shield, 
   Clock, 
   CheckCircle, 
   Users, 
-  Star,
+  Zap, 
+  HeartHandshake,
   Award,
-  Zap,
-  HeartHandshake
+  Star
 } from "lucide-react";
 
 const benefits = [
   {
     icon: Shield,
-    title: "Licensed ",
+    title: "Licensed & Insured",
     description: "Fully licensed, bonded,  for your peace of mind.",
     color: "bg-blue-100 text-blue-600"
   },
@@ -51,6 +52,20 @@ const benefits = [
 ];
 
 export default function WhyChooseUs() {
+  const [averageRating, setAverageRating] = useState("0");
+  const [totalReviews, setTotalReviews] = useState(0);
+
+  useEffect(() => {
+    loadReviewStats();
+  }, []);
+
+  const loadReviewStats = async () => {
+    const average = await Testimonial.getAverageRating();
+    const total = await Testimonial.getTotalReviews();
+    setAverageRating(average);
+    setTotalReviews(total);
+  };
+
   return (
     <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -97,7 +112,7 @@ export default function WhyChooseUs() {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div>
-                <div className="text-4xl font-bold mb-2">2,500+</div>
+                <div className="text-4xl font-bold mb-2">{totalReviews}+</div>
                 <div className="text-blue-200">Happy Customers</div>
               </div>
               <div>
@@ -105,7 +120,7 @@ export default function WhyChooseUs() {
                 <div className="text-blue-200">Projects Completed</div>
               </div>
               <div>
-                <div className="text-4xl font-bold mb-2">4.9★</div>
+                <div className="text-4xl font-bold mb-2">{averageRating}★</div>
                 <div className="text-blue-200">Average Rating</div>
               </div>
             </div>

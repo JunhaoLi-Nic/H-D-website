@@ -37,7 +37,7 @@ const services = [
     title: "Living Room",
     description: "Complete living room assembly including sofas, entertainment centers, and coffee tables",
     features: ["Heavy furniture specialists", "Wall mounting", "Layout advice"],
-    price: "From $120",
+    price: "From $75",
     popular: false
   },
   {
@@ -45,7 +45,7 @@ const services = [
     title: "Dining Room",
     description: "Dining tables, chairs, buffets, and china cabinets assembled with precision",
     features: ["Level adjustment", "Chair matching", "Table extension setup"],
-    price: "From $90",
+    price: "From $75",
     popular: false
   },
   {
@@ -53,7 +53,7 @@ const services = [
     title: "Outdoor Furniture",
     description: "Patio sets, garden furniture, and outdoor storage solutions",
     features: ["Weather-resistant assembly", "Seasonal service", "UV protection tips"],
-    price: "From $110",
+    price: "From $85",
     popular: false
   },
   {
@@ -61,7 +61,7 @@ const services = [
     title: "IKEA Specialists",
     description: "Expert IKEA furniture assembly with all the right tools and experience",
     features: ["IKEA certified", "Pickup service", "Fastest assembly"],
-    price: "From $60",
+    price: "From $70",
     popular: true
   }
 ];

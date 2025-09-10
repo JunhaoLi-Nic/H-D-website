@@ -25,9 +25,16 @@ import TestimonialsSection from "../components/home/TestimonialsSection";
 
 export default function Home() {
   const [testimonials, setTestimonials] = useState([]);
+  const [stats, setStats] = useState([
+    { icon: Users, label: "Happy Customers", value: "0+" },
+    { icon: Wrench, label: "Projects Completed", value: "500+" },
+    { icon: Award, label: "Years Experience", value: "5+" },
+    { icon: Star, label: "Average Rating", value: "4.7" },
+  ]);
 
   useEffect(() => {
     loadTestimonials();
+    loadReviewStats();
   }, []);
 
   const loadTestimonials = async () => {
@@ -35,12 +42,17 @@ export default function Home() {
     setTestimonials(data);
   };
 
-  const stats = [
-    { icon: Users, label: "Happy Customers", value: "300+" },
-    { icon: Wrench, label: "Projects Completed", value: "500+" },
-    { icon: Award, label: "Years Experience", value: "5+" },
-    { icon: Star, label: "Average Rating", value: "4.9" },
-  ];
+  const loadReviewStats = async () => {
+    const totalReviews = await Testimonial.getTotalReviews();
+    const averageRating = await Testimonial.getAverageRating();
+    
+    setStats([
+      { icon: Users, label: "Happy Customers", value: `${totalReviews}+` },
+      { icon: Wrench, label: "Projects Completed", value: "500+" },
+      { icon: Award, label: "Years Experience", value: "5+" },
+      { icon: Star, label: "Average Rating", value: averageRating },
+    ]);
+  };
 
   return (
     <div className="overflow-hidden">

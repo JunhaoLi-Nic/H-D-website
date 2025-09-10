@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { createPageUrl } from "@/utils";
-import { Home, FileText, Wrench, Users, Phone } from "lucide-react";
+import { Home, FileText, Wrench, Users, Phone, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const navigationItems = [
@@ -19,6 +19,11 @@ const navigationItems = [
     title: "Get Quote",
     url: createPageUrl("Quote"),
     icon: FileText,
+  },
+  {
+    title: "Reviews",
+    url: createPageUrl("Reviews"),
+    icon: Star,
   },
   {
     title: "About",

@@ -1,6 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
-import { Star, Quote } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Star, Quote, Edit3 } from "lucide-react";
+import { createPageUrl } from "@/utils";
 
 export default function TestimonialsSection({ testimonials }) {
   if (!testimonials.length) return null;
@@ -46,6 +49,33 @@ export default function TestimonialsSection({ testimonials }) {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        {/* Call to Action */}
+        <div className="text-center mt-16">
+          <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-2xl p-8 border border-blue-200">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              Had a great experience with us?
+            </h3>
+            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+              Share your experience and help other customers choose the best furniture assembly service. 
+              Your review makes a difference!
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to={createPageUrl("Reviews")}>
+                <Button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg hover:shadow-xl transition-all duration-300">
+                  <Edit3 className="w-4 h-4 mr-2" />
+                  Write a Review
+                </Button>
+              </Link>
+              <Link to={createPageUrl("Reviews")}>
+                <Button variant="outline" className="border-blue-200 text-blue-700 hover:bg-blue-50">
+                  <Star className="w-4 h-4 mr-2" />
+                  View All Reviews
+                </Button>
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </section>
